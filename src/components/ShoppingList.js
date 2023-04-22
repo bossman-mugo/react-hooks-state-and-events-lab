@@ -5,6 +5,21 @@ function ShoppingList({ items }) {
 
   const [selectedCategory, setselectedCategory] = useState("All");
 
+  function handleFilterCategory(e){
+    setselectedCategory(e.target.value)
+  }
+
+  function displayItems(){
+    items.filter((item) => {
+      if (selectedCategory === "All"){
+        return true
+      }
+      else {
+        return item.category === selectedCategory;
+      }
+    })
+  }
+
 
 
 
