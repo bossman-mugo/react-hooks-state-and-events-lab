@@ -1,7 +1,7 @@
 import React , {useState} from "react";
 
 function Item({ name, category }) {
-const [inCart, setInCart] = useState(true);
+const [inCart, setInCart] = useState(false);
 
 function addItem(){
   setInCart(true);
